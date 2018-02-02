@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://unpkg.com/semantic-ui@2.2.13/dist/semantic.css">
+  <script src="https://unpkg.com/jquery"></script>
+</head>
+<body>
+  <div class="ui container" style="padding-top: 100px">
+    <form class="ui form" action="#" method="get">
+      <div class="field">
+        <input type="text" name="user" placeholder="用户名">
+      </div>
+      <div class="field">
+        <input type="text" name="pass" placeholder="密码">
+      </div>
+      <div class="field">
+        <div class="ui two buttons">
+          <button type="button" class="ui negative button">注册</button>
+          <button type="button" class="ui positive button">登录</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <script>
+  $(document).ready(function(){
+    $('.negative,.positive')
+      .click(function(){
+        var data = $('form').serialize();
+        var act = $(this).hasClass('negative') ? 'reg' : 'login';
+        $.ajax({
+          url: 'http://localhost:4040/user?act='+act,
+          data: data,
+          dataType: 'json',
+          method: 'get',
+          success: function(response) {
+            alert(response.msg);
+          },
+          error: function() {
+            console.log('网络错误');
+          }
+        })
+      })
+    ;
+  })
+  </script>
+</body>
+</html>
