@@ -9,3 +9,4 @@ express 框架
 - 非破坏式的，添加了一些自己的东西
 - static 用法 `require('express-static')`
 - 链式操作 next
+- 可以自己写一个中间件，看 `express2.js` 和 `lib/bodyParser.js`
