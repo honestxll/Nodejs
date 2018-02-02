@@ -8,3 +8,4 @@ express 框架
 - - get  post  use
 - 非破坏式的，添加了一些自己的东西
 - static 用法 `require('express-static')`
+- 链式操作 next
