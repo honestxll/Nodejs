@@ -1,7 +1,9 @@
 {
   "dependencies": {
     "cookie-parser": "^1.4.3",
+    "ejs": "^2.5.7",
     "express": "^4.16.2",
-    "express-static": "^1.2.5"
+    "express-static": "^1.2.5",
+    "jade": "^1.11.0"
   }
 }
