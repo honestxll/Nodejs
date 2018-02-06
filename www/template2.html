@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://unpkg.com/semantic-ui@2.2.13/dist/semantic.css">
+    <title>jade 高级用法</title>
+  </head>
+  <body>
+    <div style="padding-top: 100px" class="ui container">
+      <h1 class="ui dividing header padded">我的名字: honest</h1>
+      <div style="width:400px;height:200px;display:flex;background-color:tan;justify-content:center;align-items:center;cursor:pointer;color:#fff" class="box">
+        div
+        aaa
+        123
+        来点我  
+      </div><div class="ui piled segment">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas tempore rem, a neque. Sequi molestiae totam nisi cumque quasi, officia, reiciendis vitae voluptas nihil minus dolor illum animi ducimus at.</div>
+
+      <div class="ui positive message"><span>a 的值是 5 b的值是 </span><span>20</span> 结果是 25<span>1</span><span>3</span><span>4</span><span></span><span>5</span><span>6</span>
+      </div>
+    </div>
+  </body>
+  <script>
+    window.onload = function () {
+      var con = document.querySelector('.box');
+      con.onclick = function () {
+        this.style.backgroundColor = this.style.backgroundColor == 'red' ? 'blue' : 'red';
+      }
+    }
+  </script>
+</html>
