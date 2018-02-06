@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .container {
+      padding: 100px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>直接保存，不修改文件名</h1>
+    <form action="http://localhost:4040/upload" enctype="multipart/form-data" method="post">
+      <input type="file" name="avatar">
+      <input type="submit" value="提交">
+    </form>
+    <h1>用上传文件的文件名</h1>
+    <form action="http://localhost:4040/save" enctype="multipart/form-data" method="post">
+      <input type="file" name="avatar">
+      <input type="submit" value="提交">
+    </form>
+  </div>
+</body>
+</html>
