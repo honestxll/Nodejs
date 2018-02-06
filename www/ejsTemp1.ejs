@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://unpkg.com/semantic-ui@2.2.13/dist/semantic.css">
+  <title>ejs 使用</title>
+</head>
+<body>
+  <div class="ui container" style="padding-top: 200px">
+    <%= data.name %>
+    <% var _div = '<div>lorem</div>' %>
+    <%# 防止转成 html 实体 %>
+    <%- _div %>
+    <% include segment.html %>
+  </div>
+</body>
+</html>
